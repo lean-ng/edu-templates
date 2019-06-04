@@ -1,0 +1,29 @@
+<div class="content">
+  <h2>Template Reference Variables</h2>
+  <hr>
+  <h3>Training: <a href="https://angular.io">Angular</a></h3>
+</div>
+<div class="card">
+  <header class="card-header">
+    <div class="card-header-title">
+      Anzahl Themen: {{ topics.length }}
+    </div>
+  </header>
+  <div class="card-content">
+    {{ topics.join(', ') }}
+  </div>
+  <footer class="card-footer">
+    <div class="card-footer-item">
+        <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Neues Thema">
+            </div>
+            <div class="control">
+              <a class="button is-info">
+                Anfügen
+              </a>
+            </div>
+          </div>
+    </div>
+  </footer>
+</div>

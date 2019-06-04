@@ -1,20 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<nav class="navbar is-info">
+  <div class="navbar-brand">
+    <a href="/" class="navbar-item is-size-4">
+      Angular Templates
+    </a>
+  </div>
+</nav>
+<main class="section">
+  <div class="container columns">
+    <div class="column is-one-quarter">
+      <aside class="menu">
+        <p class="menu-label">
+          Template Code
+        </p>
+        <ul class="menu-list">
+          <li><a [class.is-active]="tabIx === 1" (click)="tabIx = 1">Expressions</a></li>
+          <li><a [class.is-active]="tabIx === 2" (click)="tabIx = 2">Statements</a></li>
+        </ul>
+        <p class="menu-label">
+          Binding Syntax
+        </p>
+        <ul class="menu-list">
+          <li><a [class.is-active]="tabIx === 3" (click)="tabIx = 3">Property Binding</a></li>
+          <li><a [class.is-active]="tabIx === 4" (click)="tabIx = 4">Interpolation</a></li>
+          <li><a [class.is-active]="tabIx === 5" (click)="tabIx = 5">Event Binding</a></li>
+          <li><a [class.is-active]="tabIx === 6" (click)="tabIx = 6">Two-Way Binding</a></li>
+          <li><a [class.is-active]="tabIx === 7" (click)="tabIx = 7">Template Reference Variablen</a></li>
+        </ul>
+        <p class="menu-label">
+          Direktiven
+        </p>
+        <ul class="menu-list">
+          <li><a [class.is-active]="tabIx === 8" (click)="tabIx = 8">Attribut Direktiven</a></li>
+          <li><a [class.is-active]="tabIx === 9" (click)="tabIx = 9">Strukturelle Direktiven</a></li>
+        </ul>
+        <p class="menu-label">
+          Sonder-Bindungen
+        </p>
+        <ul class="menu-list">
+          <li><a [class.is-active]="tabIx === 10" (click)="tabIx = 10">Attribut Bindings</a></li>
+          <li><a [class.is-active]="tabIx === 11" (click)="tabIx = 11">Class Bindings</a></li>
+          <li><a [class.is-active]="tabIx === 12" (click)="tabIx = 12">Style Bindings</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class="column">
+      <app-property-binding *ngIf="tabIx === 3"></app-property-binding>
+      <app-interpolation *ngIf="tabIx === 4"></app-interpolation>
+      <app-event-binding *ngIf="tabIx === 5"></app-event-binding>
+      <app-twoway-binding *ngIf="tabIx === 6"></app-twoway-binding>
+      <app-template-refvars *ngIf="tabIx === 7"></app-template-refvars>
+      <app-attr-directive *ngIf="tabIx === 8"></app-attr-directive>
+      <app-struct-directive *ngIf="tabIx === 9"></app-struct-directive>
+      <app-attr-binding *ngIf="tabIx === 10"></app-attr-binding>
+      <app-class-binding *ngIf="tabIx === 11"></app-class-binding>
+      <app-style-binding *ngIf="tabIx === 12"></app-style-binding>
+    </div>
+  </div>
+</main>

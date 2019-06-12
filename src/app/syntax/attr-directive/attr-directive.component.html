@@ -1,20 +1,22 @@
 <div class="content">
   <h2>Built-In Attribute Directives</h2>
   <hr>
-  <h3>Training: <a href="https://angular.io">Angular</a></h3>
+  <h3>Training: <a href="https://{{ frameworkHomepage }}">{{ frameworkTitle }}</a></h3>
 </div>
+<!-- Card ausblenden, falls keine Themen da sind. -->
 <div class="card">
   <header class="card-header">
     <div class="card-header-title">
-      Anzahl Themen: 3
+      Anzahl Themen: {{ topics.length }}
     </div>
   </header>
   <div class="card-content">
     <div class="content">
       <ul>
-        <li>Template Syntax</li>
-        <li>Component Interaction</li>
-        <li>Services and DI</li>
+        <!-- Setze die Klasse je nach completed-State -->
+        <li class="completed">{{ topics[0].title }}</li>
+        <li>{{ topics[1].title }}</li>
+        <li>{{ topics[2].title }}</li>
       </ul>
     </div>
     <div class="notification">

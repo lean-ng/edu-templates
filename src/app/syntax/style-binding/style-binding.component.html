@@ -1,24 +1,19 @@
 <div class="content">
   <h2>Style Binding</h2>
   <hr>
-  <h3>Training: <a href="https://angular.io">Angular</a></h3>
+  <h3>Training: <a href="https://{{ frameworkHomepage }}">{{ frameworkTitle }}</a></h3>
 </div>
 <div class="card">
   <header class="card-header">
     <div class="card-header-title">
-      Anzahl Themen: 3
+      Anzahl Themen: {{ topics.length }}
     </div>
   </header>
   <div class="card-content">
     <div class="content">
       <ul>
-        <li>Template Syntax</li>
-        <li>Component Interaction</li>
-        <li>Services and DI</li>
+        <li *ngFor="let t of topics">{{ t.title }}</li>
       </ul>
-    </div>
-    <div class="notification">
-      Doppel-Klick auf ein Thema, um es als erledigt zu markieren
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@ export class AttrDirectiveComponent implements OnInit {
   frameworkTitle = 'Angular';
   frameworkHomepage = 'angular.io';
   topics = [
-    { title: 'Template Syntax', completed: false },
+    { title: 'Template Syntax', completed: true },
     { title: 'Component Interaction', completed: false },
     { title: 'Services and DI', completed: false },
   ];

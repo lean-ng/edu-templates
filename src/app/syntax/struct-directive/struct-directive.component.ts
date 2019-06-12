@@ -9,11 +9,14 @@ export class StructDirectiveComponent implements OnInit {
 
   frameworkTitle = 'Angular';
   frameworkHomepage = 'angular.io';
-  topics = ['Template Syntax', 'Component Interaction', 'Services and DI'];
+  topics = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  addTopic(title) {
+    this.topics.push({ title });
+  }
 }

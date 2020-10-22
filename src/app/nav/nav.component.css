@@ -16,7 +16,14 @@
   padding: 0;
 }
 
+.menu-list .mat-list-item {
+  height: 36px;
+}
 .menu-list li a {
   padding-left: 1rem;
-  height: 36px;
+}
+
+.menu-list li.active {
+  background: rgba(103,58,183,.15);
+  color: #673ab7;
 }

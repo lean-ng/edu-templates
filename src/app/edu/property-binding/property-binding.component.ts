@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyBindingComponent implements OnInit {
 
+  frameworkTitle = 'Angular';
+  frameworkHomepage = 'https://angular.io';
+  topics = ['Template Syntax', 'Component Interaction', 'Services and DI'];
+
   constructor() { }
 
   ngOnInit(): void {

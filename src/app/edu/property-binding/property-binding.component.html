@@ -1,1 +1,31 @@
 <h2>Property Binding</h2>
+<mat-card class="edu-card">
+  <mat-card-header>
+    <mat-card-title>
+      <!-- Titel und Url einsetzen-->
+      Training: <a href="https://framework-url.de">Framework</a>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <!-- Spaltenanzahl dynamisch berechnen -->
+          <th colspan="1">Themen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- Thementitel einfügen-->
+          <td>Thema 1</td>
+          <td>Thema 2</td>
+          <td>Thema 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "edu-templates"
+    }
+  },
+  "defaultProject": "edu-templates",
+  "cli": {
+    "analytics": false
+  }
 }

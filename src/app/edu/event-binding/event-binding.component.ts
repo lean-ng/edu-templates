@@ -10,21 +10,18 @@ export class EventBindingComponent implements OnInit {
   frameworkTitle = 'Angular';
   frameworkHomepage = 'https://angular.io';
   topics = ['Template Syntax', 'Component Interaction', 'Services and DI'];
+  newTopic = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addTopic(ev: Event): void {
-    ev.preventDefault();
-
-    // Look up input field
-    const inputFld = (ev.target as HTMLElement).querySelector('input');
-    const topic = inputFld.value.trim();
+  addTopic(): void {
+    const topic = this.newTopic.trim();
     if (topic) {
       this.topics.push(topic);
     }
-    inputFld.value = '';
+    this.newTopic = '';
   }
 }

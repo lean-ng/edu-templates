@@ -27,3 +27,7 @@
 .menu-wrapper li.active {
   @apply bg-gray-400;
 }
+
+.menu-wrapper a {
+  @apply block;
+}

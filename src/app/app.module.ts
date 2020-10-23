@@ -8,12 +8,14 @@ import { NavComponent } from './nav/nav.component';
 import { PropertyBindingComponent } from './edu/property-binding/property-binding.component';
 import { InterpolationComponent } from './edu/interpolation/interpolation.component';
 import { EventBindingComponent } from './edu/event-binding/event-binding.component';
+import { TwoWayComponent } from './edu/two-way/two-way.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
   { path: 'property-binding', component: PropertyBindingComponent },
   { path: 'interpolation', component: InterpolationComponent },
   { path: 'event-binding', component: EventBindingComponent },
+  { path: 'two-way', component: TwoWayComponent },
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const routes: Route[] = [
     NavComponent,
     PropertyBindingComponent,
     InterpolationComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,

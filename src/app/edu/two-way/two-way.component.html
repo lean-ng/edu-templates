@@ -1,0 +1,25 @@
+<div class="edu-sample">
+  <h2>Two-Way Binding</h2>
+  <div class="card">
+    <header class="card-header">
+      <!-- Titel und Url einsetzen-->
+      Training: <a [href]="frameworkHomepage" target="_blank">{{ frameworkTitle }}</a>
+    </header>
+    <div class="card-content">
+      <div class="card-content-title">
+        <!-- Themen (komma-getrennter String) -->
+        {{ topics.join(', ') }}
+      </div>
+      <!-- Prevent Submission -->
+      <form class="flex simple-form" (submit)="addTopic(); $event.preventDefault()">
+        <!-- Neues Thema im Input-Feld übernehmen (Enter-Taste oder Click auf den Button) -->
+        <!-- Feldinhalt sollte danach leer sein -->
+        <!-- Wie ist es zu lösen, wenn form und button Element fehlen?-->
+        <input type="text" placeholder="Weiteres Thema" class="block w-full mr-4"
+          [value]="newTopic" (change)="newTopic = $event.target.value"
+        >
+        <button class="block">Anfügen</button>
+      </form>
+    </div>
+  </div>
+</div>

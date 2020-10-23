@@ -16,4 +16,15 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTopic(ev: Event): void {
+    ev.preventDefault();
+
+    // Look up input field
+    const inputFld = (ev.target as HTMLElement).querySelector('input');
+    const topic = inputFld.value.trim();
+    if (topic) {
+      this.topics.push(topic);
+    }
+    inputFld.value = '';
+  }
 }

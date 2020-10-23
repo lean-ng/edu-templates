@@ -1,0 +1,26 @@
+.main-nav {
+  top: 64px;
+}
+
+.menu-wrapper {
+  @apply mt-4;
+}
+
+.menu-wrapper .menu-title {
+  font-variant: small-caps;
+  @apply ml-4;
+  @apply text-gray-600
+}
+
+.menu-wrapper ul {
+  @apply mt-1;
+}
+
+.menu-wrapper li {
+  @apply h-8;
+  @apply pl-8;
+  @apply leading-8;
+}
+.menu-wrapper li:hover {
+  @apply bg-gray-200;
+}

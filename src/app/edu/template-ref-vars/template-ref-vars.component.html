@@ -11,11 +11,11 @@
         {{ topics.join(', ') }}
       </div>
       <!-- Prevent Submission -->
-      <form class="flex simple-form">
+      <form class="flex simple-form" (submit)="addTopic(fld.value.trim()); fld.value=''; $event.preventDefault()">
         <!-- Neues Thema im Input-Feld übernehmen (Enter-Taste oder Click auf den Button) -->
         <!-- Feldinhalt sollte danach leer sein -->
         <!-- Wie ist es zu lösen, wenn form und button Element fehlen?-->
-        <input type="text" placeholder="Weiteres Thema" class="block w-full mr-4">
+        <input #fld type="text" placeholder="Weiteres Thema" class="block w-full mr-4">
         <button class="block">Anfügen</button>
       </form>
     </div>

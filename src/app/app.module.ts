@@ -10,6 +10,7 @@ import { PropertyBindingComponent } from './edu/property-binding/property-bindin
 import { InterpolationComponent } from './edu/interpolation/interpolation.component';
 import { EventBindingComponent } from './edu/event-binding/event-binding.component';
 import { TwoWayComponent } from './edu/two-way/two-way.component';
+import { TemplateRefVarsComponent } from './edu/template-ref-vars/template-ref-vars.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Route[] = [
   { path: 'interpolation', component: InterpolationComponent },
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'two-way', component: TwoWayComponent },
+  { path: 'ref-vars', component: TemplateRefVarsComponent },
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Route[] = [
     PropertyBindingComponent,
     InterpolationComponent,
     EventBindingComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    TemplateRefVarsComponent
   ],
   imports: [
     BrowserModule,

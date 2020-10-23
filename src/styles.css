@@ -15,8 +15,8 @@
   }
 
   .card {
-    max-width: 400px;
-    @apply mt-8 mx-auto p-4;
+    max-width: 480px;
+    @apply mt-8 mx-auto p-8;
     @apply border border-gray-200 rounded shadow;
   }
 

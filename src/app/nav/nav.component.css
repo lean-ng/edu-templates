@@ -24,3 +24,6 @@
 .menu-wrapper li:hover {
   @apply bg-gray-200;
 }
+.menu-wrapper li.active {
+  @apply bg-gray-400;
+}

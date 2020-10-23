@@ -3,3 +3,42 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+@layer components {
+  .edu-sample {
+    @apply mt-4 mx-8;
+  }
+  .edu-sample h2 {
+    @apply text-2xl pb-2;
+    @apply font-semibold;
+    @apply border-gray-500 border-b;
+  }
+
+  .card {
+    max-width: 400px;
+    @apply mt-8 mx-auto p-4;
+    @apply border border-gray-200 rounded shadow;
+  }
+
+  .card-header {
+    @apply text-xl font-semibold;
+    @apply mb-4;
+  }
+
+  .card .table-desc {
+    @apply font-semibold;
+    @apply mb-4;
+  }
+
+  .card table {
+    @apply w-full;
+    @apply border-collapse border-2 border-gray-500;
+  }
+  .card th {
+    @apply border border-gray-400 px-4 py-2;
+    @apply text-gray-800;
+  }
+  .card td {
+    @apply border border-gray-400 px-4 py-2;
+  }
+}

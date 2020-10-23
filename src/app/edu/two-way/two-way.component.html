@@ -11,12 +11,12 @@
         {{ topics.join(', ') }}
       </div>
       <!-- Prevent Submission -->
-      <form class="flex simple-form" (submit)="addTopic(); $event.preventDefault()">
+      <form class="flex simple-form" (ngSubmit)="addTopic()">
         <!-- Neues Thema im Input-Feld übernehmen (Enter-Taste oder Click auf den Button) -->
         <!-- Feldinhalt sollte danach leer sein -->
         <!-- Wie ist es zu lösen, wenn form und button Element fehlen?-->
-        <input type="text" placeholder="Weiteres Thema" class="block w-full mr-4"
-          [value]="newTopic" (change)="newTopic = $event.target.value"
+        <input type="text" placeholder="Weiteres Thema" class="block w-full mr-4" name="topic"
+          [(ngModel)]="newTopic"
         >
         <button class="block">Anfügen</button>
       </form>

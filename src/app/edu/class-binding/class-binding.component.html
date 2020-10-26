@@ -6,14 +6,12 @@
     </header>
     <div class="card-content">
       <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
-      <div *ngIf="topics.length; else noTopics" class="card-content-title">
+      <div class="card-content-title" [class]="{ 'no-display': topics.length === 0 }">
         Themenliste
       </div>
-      <ng-template #noTopics>
-          <div class="card-content-title">
-            Erstes Thema bitte angeben.
-          </div>
-      </ng-template>
+      <div class="card-content-title" [class.no-display]="topics.length > 0">
+        Erstes Thema bitte angeben.
+      </div>
       <!-- Iterieren über alle Topics -->
       <!-- Completed CSS-Klasse setzten-->
       <!-- Togglen des Completed States über doppelclick -->
@@ -21,7 +19,7 @@
       <ul>
         <li
           *ngFor="let t of topics"
-          [ngClass]="{ completed: t.completed }"
+          [class]="{ completed: t.completed }"
           (dblclick)="toggleTopic(t)"
         >
           {{ t.title }}

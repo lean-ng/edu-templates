@@ -12,9 +12,9 @@
       </div>
       <table>
         <tbody>
-          <tr *ngFor="let t of topics; let erstes=first">
+          <tr [attr.data-id]="t.id" *ngFor="let t of topics; let erstes=first">
             <!-- Spaltenanzahl dynamisch berechnen -->
-            <th *ngIf="erstes" rowSpan="3">Themen</th>
+            <th *ngIf="erstes" [attr.rowSpan]="topics.length">Themen</th>
             <td [textContent]="t.title"></td>
           </tr>
         </tbody>

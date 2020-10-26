@@ -12,6 +12,7 @@ import { EventBindingComponent } from './edu/event-binding/event-binding.compone
 import { TwoWayComponent } from './edu/two-way/two-way.component';
 import { TemplateRefVarsComponent } from './edu/template-ref-vars/template-ref-vars.component';
 import { AttributeDirectivesComponent } from './edu/attribute-directives/attribute-directives.component';
+import { StructuralDirectivesComponent } from './edu/structural-directives/structural-directives.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Route[] = [
   { path: 'two-way', component: TwoWayComponent },
   { path: 'ref-vars', component: TemplateRefVarsComponent },
   { path: 'attr-directive', component: AttributeDirectivesComponent },
+  { path: 'struct-directive', component: StructuralDirectivesComponent },
 ];
 
 @NgModule({
@@ -33,7 +35,8 @@ const routes: Route[] = [
     EventBindingComponent,
     TwoWayComponent,
     TemplateRefVarsComponent,
-    AttributeDirectivesComponent
+    AttributeDirectivesComponent,
+    StructuralDirectivesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<div class="edu-sample">
+  <h2>Strukturelle Direktiven</h2>
+  <div class="card">
+    <header class="card-header">
+      Training: <a [href]="frameworkHomepage" target="_blank">{{ frameworkTitle }}</a>
+    </header>
+    <div class="card-content">
+      <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
+      <div class="card-content-title">
+        Themenliste
+      </div>
+      <!-- Iterieren über alle Topics -->
+      <!-- Completed CSS-Klasse setzten-->
+      <!-- Togglen des Completed States über doppelclick -->
+      <ul>
+      </ul>
+      <!-- Thema hinzufügen nach Enter -->
+      <div class="simple-form mt-4">
+        <input #fld type="text" placeholder="Neues Thema" class="block w-full mr-4">
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,10 +17,10 @@ export class StructuralDirectivesComponent implements OnInit {
   }
 
   addTopic(title: string): void {
-
+    this.topics.push({ title, completed: false });
   }
 
   toggleTopic(topic: { title: string, completed: boolean}): void {
-
+    topic.completed = !topic.completed;
   }
 }

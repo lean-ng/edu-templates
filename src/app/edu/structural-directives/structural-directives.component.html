@@ -6,17 +6,27 @@
     </header>
     <div class="card-content">
       <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
-      <div class="card-content-title">
+      <div *ngIf="topics.length" class="card-content-title">
         Themenliste
+      </div>
+      <div *ngIf="topics.length===0" class="card-content-title">
+        Erstes Thema bitte angeben.
       </div>
       <!-- Iterieren über alle Topics -->
       <!-- Completed CSS-Klasse setzten-->
       <!-- Togglen des Completed States über doppelclick -->
       <ul>
+        <li
+          *ngFor="let t of topics"
+          [ngClass]="{ completed: t.completed }"
+          (dblclick)="toggleTopic(t)"
+        >
+          {{ t.title }}
+        </li>
       </ul>
       <!-- Thema hinzufügen nach Enter -->
       <div class="simple-form mt-4">
-        <input #fld type="text" placeholder="Neues Thema" class="block w-full mr-4">
+        <input #fld (keyup.enter)="addTopic(fld.value); fld.value=''" type="text" placeholder="Neues Thema" class="block w-full mr-4">
       </div>
     </div>
   </div>

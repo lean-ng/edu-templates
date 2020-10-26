@@ -1,0 +1,34 @@
+<div class="edu-sample">
+  <h2>Style Binding</h2>
+  <div class="card">
+    <header class="card-header">
+      Training: <a [href]="frameworkHomepage" target="_blank">{{ frameworkTitle }}</a>
+    </header>
+    <div class="card-content">
+      <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
+      <div class="card-content-title" [class]="{ 'no-display': topics.length === 0 }">
+        Themenliste
+      </div>
+      <div class="card-content-title" [class.no-display]="topics.length > 0">
+        Erstes Thema bitte angeben.
+      </div>
+      <!-- Iterieren über alle Topics -->
+      <!-- Completed CSS-Klasse setzten-->
+      <!-- Togglen des Completed States über doppelclick -->
+      <!-- Zusatz: track-by topic id -->
+      <ul>
+        <li
+          *ngFor="let t of topics"
+          [class]="{ completed: t.completed }"
+          (dblclick)="toggleTopic(t)"
+        >
+          {{ t.title }}
+        </li>
+      </ul>
+      <!-- Thema hinzufügen nach Enter -->
+      <div class="simple-form mt-4">
+        <input #fld (keyup.enter)="addTopic(fld.value); fld.value=''" type="text" placeholder="Neues Thema" class="block w-full mr-4">
+      </div>
+    </div>
+  </div>
+</div>

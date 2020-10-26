@@ -6,7 +6,3 @@ ul {
 ul li {
   user-select: none;
 }
-
-ul li.completed {
-  text-decoration: line-through;
-}

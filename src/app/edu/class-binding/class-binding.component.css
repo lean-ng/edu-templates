@@ -3,9 +3,12 @@ ul {
   list-style-type: disc;
 }
 
+ul li {
+  user-select: none;
+}
+
 ul li.completed {
   text-decoration: line-through;
-  user-select: none;
 }
 
 .no-display {

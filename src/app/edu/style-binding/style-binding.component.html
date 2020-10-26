@@ -1,15 +1,15 @@
 <div class="edu-sample">
   <h2>Style Binding</h2>
-  <div class="card">
+  <div class="card" [style.width.rem]="20">
     <header class="card-header">
       Training: <a [href]="frameworkHomepage" target="_blank">{{ frameworkTitle }}</a>
     </header>
     <div class="card-content">
       <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
-      <div class="card-content-title" [class]="{ 'no-display': topics.length === 0 }">
+      <div class="card-content-title" [style]="{ 'display': topics.length === 0 ? 'none' : 'block' }">
         Themenliste
       </div>
-      <div class="card-content-title" [class.no-display]="topics.length > 0">
+      <div class="card-content-title" [style.display]="topics.length === 0 ? 'block' : 'none'">
         Erstes Thema bitte angeben.
       </div>
       <!-- Iterieren über alle Topics -->
@@ -19,7 +19,7 @@
       <ul>
         <li
           *ngFor="let t of topics"
-          [class]="{ completed: t.completed }"
+          [style.text-decoration]="t.completed ? 'line-through' : 'none'"
           (dblclick)="toggleTopic(t)"
         >
           {{ t.title }}

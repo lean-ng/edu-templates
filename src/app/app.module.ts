@@ -14,6 +14,7 @@ import { TemplateRefVarsComponent } from './edu/template-ref-vars/template-ref-v
 import { AttributeDirectivesComponent } from './edu/attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './edu/structural-directives/structural-directives.component';
 import { AttrBindingComponent } from './edu/attr-binding/attr-binding.component';
+import { ClassBindingComponent } from './edu/class-binding/class-binding.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Route[] = [
   { path: 'attr-directive', component: AttributeDirectivesComponent },
   { path: 'struct-directive', component: StructuralDirectivesComponent },
   { path: 'attr-binding', component: AttrBindingComponent },
+  { path: 'class-binding', component: ClassBindingComponent },
 ];
 
 @NgModule({
@@ -39,7 +41,8 @@ const routes: Route[] = [
     TemplateRefVarsComponent,
     AttributeDirectivesComponent,
     StructuralDirectivesComponent,
-    AttrBindingComponent
+    AttrBindingComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule,

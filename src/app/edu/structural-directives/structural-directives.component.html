@@ -6,12 +6,14 @@
     </header>
     <div class="card-content">
       <!-- Nicht rendern, wenn noch keine Topics da sind. Stattdessen Hinweis -->
-      <div *ngIf="topics.length" class="card-content-title">
+      <div *ngIf="topics.length; else noTopics" class="card-content-title">
         Themenliste
       </div>
-      <div *ngIf="topics.length===0" class="card-content-title">
-        Erstes Thema bitte angeben.
-      </div>
+      <ng-template #noTopics>
+          <div class="card-content-title">
+            Erstes Thema bitte angeben.
+          </div>
+      </ng-template>
       <!-- Iterieren über alle Topics -->
       <!-- Completed CSS-Klasse setzten-->
       <!-- Togglen des Completed States über doppelclick -->

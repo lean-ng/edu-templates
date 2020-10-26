@@ -1,0 +1,20 @@
+<div class="edu-sample">
+  <h2>Attribute Direktiven</h2>
+  <div class="card">
+    <header class="card-header">
+      Training: <a [href]="frameworkHomepage" target="_blank">{{ frameworkTitle }}</a>
+    </header>
+    <div class="card-content">
+      <div class="card-content-title">
+        Themenliste
+      </div>
+      <!-- Setze completed-Klasse, falls topic completed ist -->
+      <!-- Togglen über Doppelclick-->
+      <ul>
+        <li class="completed">{{ topics[0].title }}</li>
+        <li>{{ topics[1].title }}</li>
+        <li>{{ topics[2].title }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

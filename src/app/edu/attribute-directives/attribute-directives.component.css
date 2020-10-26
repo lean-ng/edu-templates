@@ -5,4 +5,5 @@ ul {
 
 ul li.completed {
   text-decoration: line-through;
+  user-select: none;
 }

@@ -11,9 +11,9 @@
       <!-- Setze completed-Klasse, falls topic completed ist -->
       <!-- Togglen über Doppelclick-->
       <ul>
-        <li class="completed">{{ topics[0].title }}</li>
-        <li>{{ topics[1].title }}</li>
-        <li>{{ topics[2].title }}</li>
+        <li [ngClass]="{ completed: topics[0].completed }" (dblclick)="toggleTopic(0)">{{ topics[0].title }}</li>
+        <li [ngClass]="{ completed: topics[1].completed }" (dblclick)="toggleTopic(1)">{{ topics[1].title }}</li>
+        <li [ngClass]="{ completed: topics[2].completed }" (dblclick)="toggleTopic(2)">{{ topics[2].title }}</li>
       </ul>
     </div>
   </div>

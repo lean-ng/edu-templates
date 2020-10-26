@@ -16,6 +16,7 @@ import { StructuralDirectivesComponent } from './edu/structural-directives/struc
 import { AttrBindingComponent } from './edu/attr-binding/attr-binding.component';
 import { ClassBindingComponent } from './edu/class-binding/class-binding.component';
 import { StyleBindingComponent } from './edu/style-binding/style-binding.component';
+import { TemplateExpressionsComponent } from './edu/template-expressions/template-expressions.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Route[] = [
   { path: 'attr-binding', component: AttrBindingComponent },
   { path: 'class-binding', component: ClassBindingComponent },
   { path: 'style-binding', component: StyleBindingComponent },
+  { path: 'template-expressions', component: TemplateExpressionsComponent },
 ];
 
 @NgModule({
@@ -45,7 +47,8 @@ const routes: Route[] = [
     StructuralDirectivesComponent,
     AttrBindingComponent,
     ClassBindingComponent,
-    StyleBindingComponent
+    StyleBindingComponent,
+    TemplateExpressionsComponent
   ],
   imports: [
     BrowserModule,

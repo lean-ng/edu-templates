@@ -1,0 +1,64 @@
+<div class="edu-sample pb-8">
+  <h2>Template Expressions</h2>
+  <p class="mt-4">
+    Der Ausdruck (Expression) der bei Property-Bindings und Interpolationen
+    verwendet wird, ist kein JavaScript - man kann vielleicht von einem Subset reden.
+  </p>
+  <div class="mt-4">
+    Wichtige Merkmale/Unterschiede sind:
+    <ul class="list-disc pl-4 mt-2">
+      <li>
+        <span class="font-semibold">Kontext:</span> Der Expression-Kontext ist
+        die Komponenten-Instanz. Dementsprechend ist das this-Keyword gebunden
+        auf die Komponenten-Instanz: {{ this.message }}
+      </li>
+      <li>
+        <span class="font-semibold">Globales Objekt:</span> Der globale Kontext
+        existiert nicht, das globale Window-Objekt ist also:
+        {{ window === undefined ? 'undefined' : '' }}. Damit ist jegliche
+        Benutzung globaler Variablen/Methoden/Klassen nicht möglich.
+      </li>
+      <li>
+        <span class="font-semibold">Seiteneffekte</span> in Ausdrücken
+        sind nicht erlaubt. Während also eine Zuweisung in JavaScript
+        technisch gesehen ein Ausdruck ist, ist die Verwendung in Template-Expressions
+        untersagt. Antwort: {{ answer }}
+      </li>
+      <li>
+        <span class="font-semibold">Pipe-Operator und Pipes:</span> Zu den Syntax-Erweiterungen gehört
+        die Neudefinition des |-Operators. Er dient zur Verknüpfung von Ausdrücken
+        mit Pipes: {{ message | uppercase }}.
+        <p class="py-2">
+          Zu den vordefinierten Pipes gehören
+        </p>
+        <ul class="list-disc pl-4">
+          <li>uppercase, lowercase, titlecase</li>
+          <li>date</li>
+          <li>currency, decimal, percent</li>
+          <li>async</li>
+          <li>slice, keyvalue</li>
+          <li>json</li>
+          <li>i18nPlural, i18nSelect</li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold">Safe-Navigation Operator: </span> dieser
+        ist mittlerweile auch in JavaScript angekommen. Wird oft eingesetzt
+        um Properties von Objekten zu rendern, die erst später definiert sind.
+        Beispiel: {{ later?.msg }}
+      </li>
+      <li>
+        <span class="font-semibold">Non-Null-Assertion:</span> Im Zusammenhang
+        mit der TypeScript-Compilation und eingeschalteten Strict-Null-Checks eingesetzt.
+        Fordert auf nullable-Properties einen not-null Wert.
+        Beispiel: {{ nullable.prop! }}
+      </li>
+      <li>
+        <span class="font-semibold">Methoden-Aufrufe:</span> Natürlich
+        können auch Methoden-Aufrufe in Template-Expressions benutzt werden.
+        Dies sollte allerdings nicht geschehen für Instanz-Methoden der Komponente
+        auf Grund des Performance-Impacts. Message: {{ message.substr(0,5) }}
+      </li>
+    </ul>
+  </div>
+</div>

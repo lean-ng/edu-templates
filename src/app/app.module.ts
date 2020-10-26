@@ -13,6 +13,7 @@ import { TwoWayComponent } from './edu/two-way/two-way.component';
 import { TemplateRefVarsComponent } from './edu/template-ref-vars/template-ref-vars.component';
 import { AttributeDirectivesComponent } from './edu/attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './edu/structural-directives/structural-directives.component';
+import { AttrBindingComponent } from './edu/attr-binding/attr-binding.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Route[] = [
   { path: 'ref-vars', component: TemplateRefVarsComponent },
   { path: 'attr-directive', component: AttributeDirectivesComponent },
   { path: 'struct-directive', component: StructuralDirectivesComponent },
+  { path: 'attr-binding', component: AttrBindingComponent },
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const routes: Route[] = [
     TwoWayComponent,
     TemplateRefVarsComponent,
     AttributeDirectivesComponent,
-    StructuralDirectivesComponent
+    StructuralDirectivesComponent,
+    AttrBindingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<div class="edu-sample">
+  <h2>Attribute Binding</h2>
+  <div class="card">
+    <header class="card-header">
+      <!-- Titel und Url einsetzen-->
+      Training: <a [href]="frameworkHomepage" [textContent]="frameworkTitle" target="_blank"></a>
+    </header>
+    <div class="card-content">
+      <div class="card-content-title">
+        <!-- Anzahl Themen dynamisch berechnen -->
+        Anzahl Themen: <span [textContent]="topics.length"></span>
+      </div>
+      <table>
+        <tbody>
+          <tr *ngFor="let t of topics; let erstes=first">
+            <!-- Spaltenanzahl dynamisch berechnen -->
+            <th *ngIf="erstes" rowSpan="3">Themen</th>
+            <td [textContent]="t.title"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
